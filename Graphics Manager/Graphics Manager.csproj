@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>GraphicsManager</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+	<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+<ItemGroup>
+  <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- Rebuild after editing GammaRamp.fx with the dotnet-mgfxc 3.8.1.303 tool: mgfxc GammaRamp.fx GammaRamp.mgfxo /Profile:DirectX_11 -->
+  <EmbeddedResource Include="Shaders\GammaRamp.mgfxo" LogicalName="CuldceptSagaExplorer.GraphicsManager.Shaders.GammaRamp.mgfxo" />
+</ItemGroup>
+
+</Project>

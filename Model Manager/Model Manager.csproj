@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>ModelManager</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpGLTF.Core" Version="1.0.7" />
+    <PackageReference Include="SharpGLTF.Toolkit" Version="1.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Graphics Manager\Graphics Manager.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Compile RseRawOpacity.fx with mgfxc 3.8.1.303 /Profile:DirectX_11 after shader edits. -->
+    <EmbeddedResource Include="Shaders\RseRawOpacity.mgfxo" LogicalName="CuldceptSagaExplorer.ModelManager.Shaders.RseRawOpacity.mgfxo" />
+  </ItemGroup>
+
+</Project>

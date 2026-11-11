@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>CuldceptSagaExplorer</RootNamespace>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Culdcept Saga Asset Manager\Culdcept Saga Asset Manager.csproj" />
+    <ProjectReference Include="..\Graphics Manager\Graphics Manager.csproj">
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Model Manager\Model Manager.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="TextureViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Model3DViewew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Progress Forms\Export Progress Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Progress Forms\Unpack Progress Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Effects.resx">
+      <ManifestResourceName>CuldceptSagaExplorer.Effects</ManifestResourceName>
+    </EmbeddedResource>
+    <None Update="extract-xiso.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
